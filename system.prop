@@ -1,0 +1,30 @@
+# Disable VSync for better performance in demanding apps
+debug.cpurend.vsync=false
+
+# Optimize GPU rendering while still keeping power consumption reasonable
+debug.hwui.renderer=gpu
+debug.sf.hw=1
+
+# Set CPU governor to balance performance and power
+ro.cpufreq.go_hispeed_load=80
+ro.cpufreq.input_boost_freq=0:1171200
+ro.cpufreq.up_threshold=90
+
+# Set minimum and maximum frequencies for balanced power consumption
+ro.vendor.qti.perf.cores_online=2
+
+# Optimize Dalvik VM for better performance and memory management
+dalvik.vm.heapsize=384m
+dalvik.vm.heapgrowthlimit=192m
+dalvik.vm.heapstartsize=8m
+
+# Improve multitasking without overloading system resources
+ro.config.max_starting_bg=8
+
+# Force GPU rendering for smoother transitions and animations
+debug.hwui.force_gpu_rendering=true
+debug.hwui.overdraw=false
+
+# Keep animations fast for good user experience without draining battery
+ro.config.hw_smoothscroll=true
+ro.surface_flinger.disable_blur=true
