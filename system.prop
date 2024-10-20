@@ -19,7 +19,7 @@ dalvik.vm.heapgrowthlimit=384m
 dalvik.vm.heapstartsize=32m
 
 # Improve multitasking without overloading system resources
-ro.config.max_starting_bg=8
+ro.config.max_starting_bg=6
 
 # Force GPU rendering for smoother transitions and animations
 debug.hwui.force_gpu_rendering=true
