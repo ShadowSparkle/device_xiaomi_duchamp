@@ -13,11 +13,6 @@ ro.cpufreq.up_threshold=90
 # Set minimum and maximum frequencies for balanced power consumption
 ro.vendor.qti.perf.cores_online=2
 
-# Optimize Dalvik VM for better performance and memory management
-dalvik.vm.heapsize=768m
-dalvik.vm.heapgrowthlimit=384m
-dalvik.vm.heapstartsize=32m
-
 # Improve multitasking without overloading system resources
 ro.config.max_starting_bg=6
 
