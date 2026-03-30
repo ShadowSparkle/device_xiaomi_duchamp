@@ -10,3 +10,13 @@ persist.vendor.camera.privapp.list=com.android.camera
 
 # MiuiCamera
 ro.miui.notch=1
+
+# Mist Inherit
+ro.mist.display=1220 x 2712, 120 hz
+ro.mist.battery=5000mah
+ro.mist.soc=Dimensity 8300 Ultra
+ro.mist.camera=64MP + 8MP + 2MP
+ro.mist.front=16MP
+ro.mist.platform=MT6897
+ro.mist.screen=6.67' AMOLED
+ro.mist.device.name=Poco X6 Pro
