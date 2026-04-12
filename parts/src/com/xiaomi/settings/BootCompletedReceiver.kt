@@ -1,4 +1,3 @@
-
 /*
  * SPDX-FileCopyrightText: 2018 The LineageOS Project
  * SPDX-FileCopyrightText: 2025 Paranoid Android
@@ -15,6 +14,7 @@ import android.os.UserHandle
 import android.util.Log
 import android.view.Display
 import android.view.Display.HdrCapabilities
+import com.xiaomi.settings.thermal.ThermalUtils
 
 /** Everything begins at boot. */
 class BootCompletedReceiver : BroadcastReceiver() {
@@ -36,6 +36,8 @@ class BootCompletedReceiver : BroadcastReceiver() {
     }
 
     private fun onLockedBootCompleted(context: Context) {
+        // Thermal
+        ThermalUtils.getInstance(context).startService()
 
         // Override HDR types to enable Dolby Vision
         val displayManager = context.getSystemService(DisplayManager::class.java)
