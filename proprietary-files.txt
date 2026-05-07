@@ -1687,8 +1687,8 @@ vendor/lib64/vendor.mediatek.hardware.netdagent-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 
 # Radio (Engineer Mode)
-system_ext/app/EngineerMode/EngineerMode.apk|212be01a370f9ea6a5176f9e7cf71fbbb8428465
-system_ext/lib64/libem_support_jni.so|a885a7aad38d2859a2b25acbaa4122128dc7e01b
+system_ext/app/EngineerMode/EngineerMode.apk|832927ebd675e5ab22f564c87490d40401faab40
+system_ext/lib64/libem_support_jni.so|39f00b239c70dc066bd9dfe470bc74aa92486ef9
 
 # Radio (Engineer Mode)
 vendor/bin/em_hidl
