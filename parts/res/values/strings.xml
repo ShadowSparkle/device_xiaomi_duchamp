@@ -36,14 +36,6 @@
     <string name="thermal_reset">Reset to defaults</string>
     <string name="thermal_reset_message">Are you sure you want to reset thermal profile for all apps?</string>
 
-    <!-- Thermal Profile -->
-    <string name="thermalprofile_title">Thermal profile</string>
-    <string name="thermalprofile_default">Default</string>
-    <string name="thermalprofile_performance">Performance</string>
-    <string name="thermalprofile_battery">Battery Saver</string>
-    <string name="thermalprofile_game">Game</string>
-    <string name="thermalprofile_unknown">Unknown</string>
-
     <!-- Turbo Charging -->
     <string name="turbo_charge_title">Turbo Charging</string>
     <string name="turbo_enable_title">Enable Turbo Charging</string>
