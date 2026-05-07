@@ -207,5 +207,7 @@ WIFI_FEATURE_HOSTAPD_11AX := true
 WIFI_FEATURE_SUPPLICANT_11AX := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += device/xiaomi/duchamp/sepolicy/private
+
 # Inherit the proprietary files
 include vendor/xiaomi/duchamp/BoardConfigVendor.mk
