@@ -91,6 +91,7 @@
 
 # Gamebar GPU
 /sys/class/devfreq/13000000\.mali(/.*)?                                                                u:object_r:sysfs_gpu:s0
+/sys/kernel/ged/hal(/.*)?                      u:object_r:sysfs_gpu:s0
 
 # Vibrator
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.vibrator\.service                                u:object_r:hal_vibrator_default_exec:s0
