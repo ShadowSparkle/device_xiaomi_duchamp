@@ -11,10 +11,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/duchamp/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/alpha/config/common_full_phone.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_duchamp
+PRODUCT_NAME := alpha_duchamp
 PRODUCT_DEVICE := duchamp
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
@@ -28,21 +28,26 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint=POCO/duchamp_global/duchamp:14/UP1A.230905.011/OS2.0.209.0.VNLMIXM:user/release-keys \
     DeviceProduct=$(PRODUCT_SYSTEM_NAME)
 
-# Mist Stuff
-MISTOS_MAINTAINER := AkariYO!!
-TARGET_ENABLE_BLUR := true
-BYPASS_CHARGE_SUPPORTED := true
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_TOUCH_BOOST_SUPPORTED := true
+# Alphadroid Inherith
+ALPHA_BUILD_TYPE := Unofficial
+ALPHA_MAINTAINER := AkariYO!!
+ALPHA_VERSION_APPEND_TIME_OF_DAY := false
 
-# UDFPS Extra
+# Extras
 TARGET_HAS_UDFPS := true
-EXTRA_UDFPS_ANIMATIONS := true
+TARGET_SUPPORTS_BLUR := true
+TARGET_EXCLUDES_AUDIOFX := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_INCLUDE_SIMPLE_TUNE := true
+TARGET_INCLUDE_MATLOG := false
+WITH_ADB_INSECURE := false
 
-# Gapps Stuff
-WITH_GMS := true
-TARGET_USES_MINI_GAPPS := true
+# Gapps Inherith
+TARGET_INCLUDE_GOOGLE_COMMS := true
+TARGET_INCLUDE_PIXEL_LAUNCHER := true
 TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_DEFAULT_PIXEL_LAUNCHER := true
-TARGET_USE_GOOGLE_TELEPHONY := true
-
+TARGET_SUPPORTS_CALL_RECORDING := true
+TARGET_INCLUDE_STOCK_ARCORE := false
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
+TARGET_BUILD_PACKAGE := 3
