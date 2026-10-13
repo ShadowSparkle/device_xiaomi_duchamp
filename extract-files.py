@@ -222,6 +222,21 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so')
         .replace_needed('libui.so', 'libui-v34.so'),
 
+    'system_ext/lib64/vendor.mediatek.hardware.camera.isphal-V1-ndk.so': blob_fixup()
+        .replace_needed('android.hardware.graphics.common-V6-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
+
+    ('system_ext/lib64/libcamera_algoup_jni.xiaomi.so',
+     'system_ext/lib64/libcamera_mianode_jni.xiaomi.so',
+     'system_ext/lib64/libcamera_ispinterface_jni.xiaomi.so'): blob_fixup()
+        .add_needed('libgui_shim_miuicamera.so')
+        .binary_regex_replace(b'\x08\xad\x40\xf9', b'\x08\xa9\x40\xf9'),
+
+    'system_ext/app/EngineerMode/EngineerMode.apk': blob_fixup()
+        .apktool_patch('blob-patches/EngineerMode/'),
+
+     'system_ext/priv-app/MiuiCamera/MiuiCamera.apk': blob_fixup()
+        .apktool_patch('blob-patches/MIUICamera/'),
+
     'vendor/etc/init/tee-supplicant.rc': blob_fixup()
         .regex_replace('chown system system /dev/ufs-bsg0', 'chown root system /dev/ufs-bsg0'),
 
