@@ -1,0 +1,27 @@
+From de611cd424a806ea5ac357f7f2e70595d7aed884 Tue Oct 13 00:00:00 2026
+From: Saikrishna1504 <saikrishna26918@gmail.com>
+Date: Tue, 13 Oct 2026 19:20:10 +0000
+Subject: [PATCH 3/5] Start gallery as a new task
+
+Change-Id: Ib8cb03df6e3555f4f3718d733f4c8300717a4198
+---
+ smali/A/c3.smali | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/smali/A/c3.smali b/smali/A/c3.smali
+index 9c6458b7..2fbb7545 100644
+--- a/smali/A/c3.smali
++++ b/smali/A/c3.smali
+@@ -143,4 +143,9 @@
+     invoke-virtual {v1, p2}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
+ 
++    # FLAG_ACTIVITY_NEW_TASK
++    const p2, 0x10000000
++
++    invoke-virtual {v1, p2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
++
+     const-string p2, "from_MiuiCamera"
+ 
+-- 
+2.43.0
+

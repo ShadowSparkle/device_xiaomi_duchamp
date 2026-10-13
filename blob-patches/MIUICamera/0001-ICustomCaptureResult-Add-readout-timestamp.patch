@@ -1,0 +1,45 @@
+From 674f4638a4da4bd07e0b607b72076dc436c1fc64 Tue Oct 13 00:00:00 2026
+From: Saikrishna1504 <saikrishna26918@gmail.com>
+Date: Tue, 13 Oct 2026 19:20:00 +0000
+Subject: [PATCH 1/5] ICustomCaptureResult: Add readout timestamp
+
+Change-Id: I308dd91cb69fb6cf45558365c2bea3c62276e6b3
+---
+ .../com/xiaomi/protocol/ICustomCaptureResult.smali     | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+
+diff --git a/smali_classes4/com/xiaomi/protocol/ICustomCaptureResult.smali b/smali_classes4/com/xiaomi/protocol/ICustomCaptureResult.smali
+index fa65efa5..9214a161 100644
+--- a/smali_classes4/com/xiaomi/protocol/ICustomCaptureResult.smali
++++ b/smali_classes4/com/xiaomi/protocol/ICustomCaptureResult.smali
+@@ -719,15 +719,17 @@
+ 
+     .line 27
+-    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
++    int-to-long v8, v10
++
++    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+ 
+     move-result-object v20
+ 
+     .line 28
+-    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
++    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+ 
+     move-result-object v21
+ 
+     .line 29
+-    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
++    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+ 
+     move-result-object v22
+@@ -736,5 +738,5 @@
+ 
+     .line 30
+-    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
++    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+ 
+     move-result-object v24
+-- 
+2.43.0
+
