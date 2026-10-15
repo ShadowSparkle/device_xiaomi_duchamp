@@ -18,6 +18,7 @@ import com.xiaomi.settings.display.ColorService
 import com.xiaomi.settings.thermal.ThermalAutoModeService
 import com.xiaomi.settings.thermal.ThermalProfileFragment
 import com.xiaomi.settings.utils.FileUtils
+import com.xiaomi.settings.turbocharging.TurboChargingService;
 
 class BootCompletedReceiver : BroadcastReceiver() {
 
@@ -56,6 +57,10 @@ class BootCompletedReceiver : BroadcastReceiver() {
     private fun onLockedBootCompleted(context: Context) {
         // Display
         ColorService.startService(context)
+
+        // Start TurboChargingService
+        val turboChargingIntent = Intent(context, TurboChargingService::class.java)
+        context.startService(turboChargingIntent)
     }
 
     private fun restoreThermalProfile(context: Context) {
