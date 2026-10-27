@@ -51,3 +51,6 @@
 
 # Core Control
 /sys/devices/system/cpu/cpu[0-7]/online                       u:object_r:vendor_sysfs_corecontrol:s0
+
+# Camera
+/data/vendor/camera(/.*)?                                                                              u:object_r:vendor_camera_data_file:s0
