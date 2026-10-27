@@ -11,7 +11,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/duchamp/device.mk)
 
 # Inherit some common Infinity-X stuff.
-$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 PRODUCT_BRAND := POCO
 PRODUCT_DEVICE := duchamp
@@ -27,13 +27,21 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint=POCO/duchamp_global/duchamp:16/BP2A.250605.031.A3/OS3.0.9.0.WNLMIXM:user/release-keys \
     DeviceProduct=duchamp_global
 
-# Infinity-X Specific Flags
-INFINITY_BUILD_TYPE := UNOFFICIAL
-INFINITY_MAINTAINER := Aayush787
-WITH_GAPPS := true
-SURFACE_FLINGER_BOOST := true
-TARGET_OPTIMIZED_DEXOPT := true
+# Mist Stuff
+MISTOS_MAINTAINER := AkariYO!!
+TARGET_ENABLE_BLUR := true
+BYPASS_CHARGE_SUPPORTED := true
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_SUPPORTED_REFRESH_RATES := 60,90,120
-TARGET_HAS_UDFPS := true
+TARGET_TOUCH_BOOST_SUPPORTED := true
 USE_REALITY_ENGINE := false
+
+# UDFPS Extra
+TARGET_HAS_UDFPS := true
+EXTRA_UDFPS_ANIMATIONS := true
+
+# Gapps Stuff
+WITH_GMS := true
+TARGET_USES_MINI_GAPPS := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
+TARGET_USE_GOOGLE_TELEPHONY := true
