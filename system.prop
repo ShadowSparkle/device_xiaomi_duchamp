@@ -16,3 +16,11 @@ ro.mist.front=16MP
 ro.mist.platform=MT6897
 ro.mist.screen=6.67' AMOLED
 ro.mist.device.name=Poco X6 Pro
+
+# Force HW composer
+debug.sf.hw=1
+debug.sf.latch_unsignaled=1
+
+# Enable AFBC  
+ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
