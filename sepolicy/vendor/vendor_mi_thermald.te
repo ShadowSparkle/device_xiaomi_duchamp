@@ -22,3 +22,6 @@ allow vendor_mi_thermald thermal_core_data_file:dir rw_dir_perms;
 allow vendor_mi_thermald thermal_core_data_file:file create_file_perms;
 
 allow vendor_mi_thermald sysfs_power_supply:lnk_file rw_file_perms;
+
+# Allow mi_thermald write and control all cpu nodes
+allow vendor_mi_thermald vendor_sysfs_corecontrol:file rw_file_perms;

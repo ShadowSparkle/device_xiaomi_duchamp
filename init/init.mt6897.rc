@@ -339,3 +339,11 @@ on boot
     chmod 0440 /sys/kernel/ged/hal/gpu_utilization
     chown system system /sys/kernel/ged/hal/current_freqency
     chmod 0440 /sys/kernel/ged/hal/current_freqency
+
+service vendor.gralloc-v2 /vendor/bin/hw/android.hardware.graphics.allocator-V2-service-mediatek
+    class hal animation
+    user system
+    group graphics drmrpc
+    capabilities SYS_NICE
+    interface aidl android.hardware.graphics.allocator.IAllocator/default
+    onrestart restart surfaceflinger
