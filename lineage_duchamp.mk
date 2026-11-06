@@ -10,7 +10,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/xiaomi/duchamp/device.mk)
 
-# Inherit some common Infinity-X stuff.
+# Inherit some common lineageos stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 PRODUCT_BRAND := POCO
@@ -23,12 +23,16 @@ PRODUCT_CHARACTERISTICS := nosdcard
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
+    RisingChipset="MTK Dimensity 8300 Ultra" \
+    RisingMaintainer=AkariYO!! \
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="missi-user 16 BP2A.250605.031.A3 OS3.0.9.0.WNLMIXM release-keys" \
     BuildFingerprint=POCO/duchamp_global/duchamp:16/BP2A.250605.031.A3/OS3.0.9.0.WNLMIXM:user/release-keys \
     DeviceProduct=duchamp_global
 
-# Mist Stuff
-MISTOS_MAINTAINER := AkariYO!!
+# RisingOS stuff
+RISING_MAINTAINER := AkariYO!!
 TARGET_ENABLE_BLUR := true
 BYPASS_CHARGE_SUPPORTED := true
 TARGET_BOOT_ANIMATION_RES := 1080
